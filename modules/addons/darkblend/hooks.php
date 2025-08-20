@@ -23,18 +23,12 @@ function admin_blend_maincss_hook($vars)  {
 		return '<link id="darkblend-css" href="../modules/addons/darkblend/css/dark-blend.css" rel="stylesheet" type="text/css" />
 		<script>
 			// Apply saved theme immediately to prevent flash
-			document.addEventListener("DOMContentLoaded", function() {
+			(function() {
 				const savedTheme = localStorage.getItem("whmcs-dark-mode");
-				console.log("Initial savedTheme:", savedTheme);
-				
 				if (savedTheme === "true") {
-					document.body.classList.add("dark-mode-active");
-					console.log("Added dark-mode-active class");
-				} else {
-					document.body.classList.remove("dark-mode-active");
-					console.log("Removed dark-mode-active class");
+					document.documentElement.classList.add("dark-mode-active");
 				}
-			});
+			})();
 		</script>';
 	}
 }
@@ -100,20 +94,18 @@ HTML;
 			const toggleIcon = document.getElementById('theme-toggle');
 			const isDark = document.body.classList.contains('dark-mode-active');
 			
-			console.log("Toggle clicked, current dark mode:", isDark);
-			
 			if (isDark) {
 				// Switch to light mode
 				document.body.classList.remove('dark-mode-active');
+				document.documentElement.classList.remove('dark-mode-active');
 				if (toggleIcon) toggleIcon.className = 'theme-toggle-icon fas fa-sun';
 				localStorage.setItem('whmcs-dark-mode', 'false');
-				console.log("Switched to light mode");
 			} else {
 				// Switch to dark mode
 				document.body.classList.add('dark-mode-active');
+				document.documentElement.classList.add('dark-mode-active');
 				if (toggleIcon) toggleIcon.className = 'theme-toggle-icon fas fa-moon';
 				localStorage.setItem('whmcs-dark-mode', 'true');
-				console.log("Switched to dark mode");
 			}
 			
 			// Add rotation animation
@@ -125,31 +117,27 @@ HTML;
 			}
 		}
 		
-		// Initialize theme on page load - run after DOM is ready
+		// Initialize theme on page load
 		setTimeout(function() {
 			const savedTheme = localStorage.getItem('whmcs-dark-mode');
 			const toggleIcon = document.getElementById('theme-toggle');
 			
-			console.log("Initializing theme, savedTheme:", savedTheme);
-			console.log("Toggle icon found:", !!toggleIcon);
-			
 			// Default to light mode unless explicitly set to dark
 			if (savedTheme === 'true') {
 				document.body.classList.add('dark-mode-active');
+				document.documentElement.classList.add('dark-mode-active');
 				if (toggleIcon) toggleIcon.className = 'theme-toggle-icon fas fa-moon';
-				console.log("Initialized to dark mode");
 			} else {
 				document.body.classList.remove('dark-mode-active');
+				document.documentElement.classList.remove('dark-mode-active');
 				if (toggleIcon) toggleIcon.className = 'theme-toggle-icon fas fa-sun';
 				localStorage.setItem('whmcs-dark-mode', 'false');
-				console.log("Initialized to light mode");
 			}
-		}, 100);
+		}, 50);
 		
 		// Bind click event to toggle
 		$(document).on('click', '#theme-toggle', function(e) {
 			e.preventDefault();
-			console.log("Toggle button clicked");
 			toggleDarkMode();
 		});
 	});
