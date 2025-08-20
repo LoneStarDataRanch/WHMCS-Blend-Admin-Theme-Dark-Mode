@@ -24,7 +24,7 @@ function admin_blend_maincss_hook($vars)  {
 		return '<link id="darkblend-css" href="../modules/addons/darkblend/css/dark-blend.css" rel="stylesheet" type="text/css" />
 		<script>
 			// Apply saved theme immediately to prevent flash
-			if (localStorage.getItem("whmcs-dark-mode") !== "false") {
+			if (localStorage.getItem("whmcs-dark-mode") === "true") {
 				document.body.classList.add("dark-mode-active");
 			}
 		</script>';
