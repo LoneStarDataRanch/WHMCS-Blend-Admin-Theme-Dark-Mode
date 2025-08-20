@@ -369,6 +369,123 @@ body.dark-mode-active h2.balance-title {
 
 /*===================================================|
 |----------------------------------------------------|
+                        Tickets                      |
+|----------------------------------------------------|
+====================================================*/
+
+body.dark-mode-active .requestor-type-operator {
+    background-color: #045380;
+}
+
+body.dark-mode-active .requestor-type-owner {
+    background-color: #0c6a0c;
+}
+
+body.dark-mode-active .ticketlastreply {
+    color: #5f8653 !important;
+    font-weight: 600;
+}
+
+body.dark-mode-active .md-editor {
+    border-color: #383838 !important;
+}
+
+body.dark-mode-active .md-editor>textarea {
+    background: #252525 !important;
+    border-color: #484848 !important;
+}
+
+body.dark-mode-active .md-header.btn-toolbar,
+body.dark-mode-active .md-footer {
+    background: var(--color-dark) !important;
+}
+
+body.dark-mode-active .ticket-reply-submit-options,
+body.dark-mode-active .ticket-reply-edit-options {
+    background-color: var(--color-dark-3) !important;
+}
+
+body.dark-mode-active .ticket-reply-submit-options .inner-container {
+    background-color: var(--color-dark-3) !important;
+    border-color: #3e3e3e !important;
+}
+
+body.dark-mode-active #prerepliescontainer #predefq,
+body.dark-mode-active .predefined-replies-search input {
+    border-color: #3e3e3e !important;
+    background: #1f1f1f !important;
+}
+
+body.dark-mode-active #ticketreplies .reply {
+    box-shadow: 0 0 5px #333 !important;
+}
+
+body.dark-mode-active #ticketreplies .reply .rightcol {
+    border-color: #1c222d !important;
+}
+
+body.dark-mode-active #ticketreplies .postedon {
+    border-bottom: 1px solid #1d232e !important;
+    padding: 10px 20px !important;
+}
+
+body.dark-mode-active #ticketreplies .reply.staff {
+    border-color: #303f4c !important;
+    background-color: #242f31 !important;
+}
+
+body.dark-mode-active #ticketreplies .reply.staff hr {
+    border-color: #29393e !important;
+}
+
+body.dark-mode-active #ticketreplies .reply.note {
+    background: #2c2417 !important;
+}
+
+body.dark-mode-active #ticketreplies .message p,
+body.dark-mode-active #ticketreplies .message {
+    color: #867f69 !important;
+    text-align: start !important;
+    unicode-bidi: plaintext !important;
+}
+
+body.dark-mode-active #ticketreplies .reply {
+    background: #171717 !important;
+    border-color: #27272a !important;
+}
+
+body.dark-mode-active #ticketreplies .reply hr {
+    border-color: #272d22 !important;
+}
+
+body.dark-mode-active #ticketreplies .ticketcontextlinks {
+    padding: 5px 10px 0 !important;
+}
+
+body.dark-mode-active div#ticketreplies img {
+    opacity: 1 !important;
+}
+
+body.dark-mode-active .lb-container img {
+    opacity: 1 !important;
+}
+
+body.dark-mode-active .postedon {
+    border-bottom: 1px solid var(--color-dark-4) !important;
+}
+
+body.dark-mode-active blockquote {
+    border-left: 5px solid #424242;
+}
+
+body.dark-mode-active blockquote p {
+    color: #797979;
+}
+
+/*====================================================================*/
+
+/*===================================================|
+|----------------------------------------------------|
                         HEADER                       |
 |----------------------------------------------------|
 ====================================================*/
@@ -575,73 +692,7 @@ body.dark-mode-active .nav-tabs>li>a:hover {
     border-color: #4e4e4e #4e4e4e var(--color-dark-5) #4e4e4e !important;
 }
 
-/* ------- ======== ------- [( Nav Stats )] ------- ======== ------- */
 
-body.dark-mode-active small.v8navstatsul {
-    display: inline-flex;
-    align-content: center;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin: -10px 0 0 0;
-}
-
-body.dark-mode-active .v8navstatsul span.icon-container {
-    font-size: 1.5em !important;
-    display: inline-flex;
-    margin: 0 7px 0 0;
-}
-
-body.dark-mode-active .navigation ul.right-nav li a.orders-pending-nav,
-body.dark-mode-active .navigation ul.right-nav li a.invoices-nav,
-body.dark-mode-active .navigation ul.right-nav li a.tickets-nav {
-    background: none !important;
-    margin: 0 !important;
-}
-
-body.dark-mode-active a.orders-pending-nav {
-    margin-right: -10px !important;
-}
-
-body.dark-mode-active .v8navstatsul span.icon-container i {
-    display: contents !important;
-}
-
-body.dark-mode-active .navigation .navbar-collapse>ul>li:not(.bt)>a.tickets-nav {
-    /*padding: 0 !important;*/
-}
-
-body.dark-mode-active .nav-time {
-    max-width: 180px !important;
-}
-
-body.dark-mode-active .nav-time small {
-    padding: 0 10px !important;
-    cursor: pointer;
-    line-height: 34px;
-    display: inline-flex;
-}
-
-body.dark-mode-active .nav-time i.fas.fa-clock {
-    font-size: 17px;
-}
-
-body.dark-mode-active .nav-time span {
-    color: #aaaaaa;
-    font-weight: 500;
-    font-size: 17px;
-}
-
-body.dark-mode-active .nav-time span.icon-container {
-    margin: 0 5px 0 0;
-}
-
-body.dark-mode-active .nav-date,
-body.dark-mode-active .nav-clock {
-    font-weight: 900 !important;
-    color: #d0d0d0 !important;
-}
 
 /*===============================================================================*/
 
@@ -941,120 +992,7 @@ body.dark-mode-active .daterangepicker th.available:hover {
 
 /*=========================================================================*/
 
-/*===================================================|
-|----------------------------------------------------|
-                        Tickets                      |
-|----------------------------------------------------|
-====================================================*/
 
-body.dark-mode-active .requestor-type-operator {
-    background-color: #045380;
-}
-
-body.dark-mode-active .requestor-type-owner {
-    background-color: #0c6a0c;
-}
-
-body.dark-mode-active .ticketlastreply {
-    color: #5f8653 !important;
-    font-weight: 600;
-}
-
-body.dark-mode-active .md-editor {
-    border-color: #383838 !important;
-}
-
-body.dark-mode-active .md-editor>textarea {
-    background: #252525 !important;
-    border-color: #484848 !important;
-}
-
-body.dark-mode-active .md-header.btn-toolbar,
-body.dark-mode-active .md-footer {
-    background: var(--color-dark) !important;
-}
-
-body.dark-mode-active .ticket-reply-submit-options,
-body.dark-mode-active .ticket-reply-edit-options {
-    background-color: var(--color-dark-3) !important;
-}
-
-body.dark-mode-active .ticket-reply-submit-options .inner-container {
-    background-color: var(--color-dark-3) !important;
-    border-color: #3e3e3e !important;
-}
-
-body.dark-mode-active #prerepliescontainer #predefq,
-body.dark-mode-active .predefined-replies-search input {
-    border-color: #3e3e3e !important;
-    background: #1f1f1f !important;
-}
-
-body.dark-mode-active #ticketreplies .reply {
-    box-shadow: 0 0 5px #333 !important;
-}
-
-body.dark-mode-active #ticketreplies .reply .rightcol {
-    border-color: #1c222d !important;
-}
-
-body.dark-mode-active #ticketreplies .postedon {
-    border-bottom: 1px solid #1d232e !important;
-    padding: 10px 20px !important;
-}
-
-body.dark-mode-active #ticketreplies .reply.staff {
-    border-color: #303f4c !important;
-    background-color: #242f31 !important;
-}
-
-body.dark-mode-active #ticketreplies .reply.staff hr {
-    border-color: #29393e !important;
-}
-
-body.dark-mode-active #ticketreplies .reply.note {
-    background: #2c2417 !important;
-}
-
-body.dark-mode-active #ticketreplies .message p,
-body.dark-mode-active #ticketreplies .message {
-    color: #867f69 !important;
-    text-align: start !important;
-    unicode-bidi: plaintext !important;
-}
-
-body.dark-mode-active #ticketreplies .reply {
-    background: #171717 !important;
-    border-color: #27272a !important;
-}
-
-body.dark-mode-active #ticketreplies .reply hr {
-    border-color: #272d22 !important;
-}
-
-body.dark-mode-active #ticketreplies .ticketcontextlinks {
-    padding: 5px 10px 0 !important;
-}
-
-body.dark-mode-active div#ticketreplies img {
-    opacity: 1 !important;
-}
-
-body.dark-mode-active .lb-container img {
-    opacity: 1 !important;
-}
-
-body.dark-mode-active .postedon {
-    border-bottom: 1px solid var(--color-dark-4) !important;
-}
-
-body.dark-mode-active blockquote {
-    border-left: 5px solid #424242;
-}
-
-body.dark-mode-active blockquote p {
-    color: #797979;
-}
 
 /*====================================================================*/
 
@@ -1615,4 +1553,78 @@ body:not([class*="dark"]) .theme-toggle-icon {
 body:not([class*="dark"]) .theme-toggle-icon:hover {
     color: #333333 !important;
     text-shadow: 0 0 5px rgba(51, 51, 51, 0.2) !important;
+}
+
+/*===================================================|
+|----------------------------------------------------|
+                 Always Dark Sections                |
+|----------------------------------------------------|
+====================================================*/
+
+/* ------- ======== ------- [( Nav Stats )] ------- ======== ------- */
+
+small.v8navstatsul {
+    display: inline-flex;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: -10px 0 0 0;
+}
+
+.v8navstatsul span.icon-container {
+    font-size: 1.5em !important;
+    display: inline-flex;
+    margin: 0 7px 0 0;
+}
+
+.navigation ul.right-nav li a.orders-pending-nav,
+.navigation ul.right-nav li a.invoices-nav,
+.navigation ul.right-nav li a.tickets-nav {
+    background: none !important;
+    margin: 0 !important;
+}
+
+a.orders-pending-nav {
+    margin-right: -10px !important;
+}
+
+.v8navstatsul span.icon-container i {
+    display: contents !important;
+}
+
+.navigation .navbar-collapse>ul>li:not(.bt)>a.tickets-nav {
+    /*padding: 0 !important;*/
+}
+
+.nav-time {
+    max-width: 180px !important;
+}
+
+.nav-time small {
+    padding: 0 10px !important;
+    cursor: pointer;
+    line-height: 34px;
+    display: inline-flex;
+}
+
+.nav-time i.fas.fa-clock {
+    font-size: 17px;
+}
+
+.nav-time span {
+    color: #aaaaaa;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.nav-time span.icon-container {
+    margin: 0 5px 0 0;
+}
+
+.nav-date,
+.nav-clock {
+    font-weight: 900 !important;
+    color: #d0d0d0 !important;
 }
