@@ -95,16 +95,16 @@ HTML;
 			const isDark = document.body.classList.contains('dark-mode-active');
 			
 			if (isDark) {
-				// Switch to light mode
+				// Switch to light mode - show moon (click to go dark)
 				document.body.classList.remove('dark-mode-active');
 				document.documentElement.classList.remove('dark-mode-active');
-				if (toggleIcon) toggleIcon.className = 'theme-toggle-icon fas fa-sun';
+				if (toggleIcon) toggleIcon.className = 'theme-toggle-icon fas fa-moon';
 				localStorage.setItem('whmcs-dark-mode', 'false');
 			} else {
-				// Switch to dark mode
+				// Switch to dark mode - show sun (click to go light)
 				document.body.classList.add('dark-mode-active');
 				document.documentElement.classList.add('dark-mode-active');
-				if (toggleIcon) toggleIcon.className = 'theme-toggle-icon fas fa-moon';
+				if (toggleIcon) toggleIcon.className = 'theme-toggle-icon fas fa-sun';
 				localStorage.setItem('whmcs-dark-mode', 'true');
 			}
 			
@@ -126,11 +126,11 @@ HTML;
 			if (savedTheme === 'true') {
 				document.body.classList.add('dark-mode-active');
 				document.documentElement.classList.add('dark-mode-active');
-				if (toggleIcon) toggleIcon.className = 'theme-toggle-icon fas fa-moon';
+				if (toggleIcon) toggleIcon.className = 'theme-toggle-icon fas fa-sun';
 			} else {
 				document.body.classList.remove('dark-mode-active');
 				document.documentElement.classList.remove('dark-mode-active');
-				if (toggleIcon) toggleIcon.className = 'theme-toggle-icon fas fa-sun';
+				if (toggleIcon) toggleIcon.className = 'theme-toggle-icon fas fa-moon';
 				localStorage.setItem('whmcs-dark-mode', 'false');
 			}
 		}, 50);
