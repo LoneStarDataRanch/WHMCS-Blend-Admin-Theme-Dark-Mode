@@ -1550,3 +1550,71 @@ div#modcmdbtns .btn:hover {
     --color-blue: #1b4d80;
     --color-blue-2: #133e69;
 }
+
+/*===================================================|
+|----------------------------------------------------|
+                    Theme Toggle                     |
+|----------------------------------------------------|
+====================================================*/
+
+.nav-toggle {
+    max-width: 50px !important;
+    cursor: pointer !important;
+}
+
+.nav-toggle small {
+    padding: 0 10px !important;
+    cursor: pointer;
+    line-height: 34px;
+    display: inline-flex;
+}
+
+.theme-toggle-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px 0 0;
+}
+
+.theme-toggle-icon {
+    font-size: 18px !important;
+    color: #999999 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    display: inline-block !important;
+}
+
+.theme-toggle-icon:hover {
+    color: #cccccc !important;
+    transform: scale(1.1) !important;
+    text-shadow: 0 0 5px rgba(204, 204, 204, 0.3) !important;
+}
+
+.nav-toggle:hover .theme-toggle-icon {
+    animation: pulse 1s infinite !important;
+}
+
+@keyframes pulse {
+    0% { 
+        transform: scale(1); 
+        opacity: 1; 
+    }
+    50% { 
+        transform: scale(1.05); 
+        opacity: 0.8; 
+    }
+    100% { 
+        transform: scale(1); 
+        opacity: 1; 
+    }
+}
+
+/* Light mode toggle styling (when dark mode is disabled) */
+body:not([class*="dark"]) .theme-toggle-icon {
+    color: #666666 !important;
+}
+
+body:not([class*="dark"]) .theme-toggle-icon:hover {
+    color: #333333 !important;
+    text-shadow: 0 0 5px rgba(51, 51, 51, 0.2) !important;
+}
