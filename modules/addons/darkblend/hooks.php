@@ -17,11 +17,17 @@
 
 use WHMCS\Database\Capsule;
 
-# main CSS call
+# main CSS call with body class support
 function admin_blend_maincss_hook($vars)  {
 
 	if ($vars['template'] == "blend" ) {
-		return '<link id="darkblend-css" href="../modules/addons/darkblend/css/dark-blend.css" rel="stylesheet" type="text/css" />';
+		return '<link id="darkblend-css" href="../modules/addons/darkblend/css/dark-blend.css" rel="stylesheet" type="text/css" />
+		<script>
+			// Apply saved theme immediately to prevent flash
+			if (localStorage.getItem("whmcs-dark-mode") !== "false") {
+				document.body.classList.add("dark-mode-active");
+			}
+		</script>';
 	}
 }
 
@@ -83,18 +89,17 @@ HTML;
 		
 		// Dark mode toggle functionality
 		function toggleDarkMode() {
-			const darkCSS = document.getElementById('darkblend-css');
 			const toggleIcon = document.getElementById('theme-toggle');
-			const isDark = localStorage.getItem('whmcs-dark-mode') === 'true';
+			const isDark = document.body.classList.contains('dark-mode-active');
 			
 			if (isDark) {
 				// Switch to light mode
-				if (darkCSS) darkCSS.disabled = true;
+				document.body.classList.remove('dark-mode-active');
 				toggleIcon.className = 'theme-toggle-icon fas fa-sun';
 				localStorage.setItem('whmcs-dark-mode', 'false');
 			} else {
 				// Switch to dark mode
-				if (darkCSS) darkCSS.disabled = false;
+				document.body.classList.add('dark-mode-active');
 				toggleIcon.className = 'theme-toggle-icon fas fa-moon';
 				localStorage.setItem('whmcs-dark-mode', 'true');
 			}
@@ -108,14 +113,13 @@ HTML;
 		
 		// Initialize theme on page load
 		const savedTheme = localStorage.getItem('whmcs-dark-mode');
-		const darkCSS = document.getElementById('darkblend-css');
 		const toggleIcon = document.getElementById('theme-toggle');
 		
-		if (savedTheme === 'false' && darkCSS) {
-			darkCSS.disabled = true;
+		if (savedTheme === 'false') {
+			document.body.classList.remove('dark-mode-active');
 			if (toggleIcon) toggleIcon.className = 'theme-toggle-icon fas fa-sun';
 		} else {
-			if (darkCSS) darkCSS.disabled = false;
+			document.body.classList.add('dark-mode-active');
 			if (toggleIcon) toggleIcon.className = 'theme-toggle-icon fas fa-moon';
 			localStorage.setItem('whmcs-dark-mode', 'true');
 		}
