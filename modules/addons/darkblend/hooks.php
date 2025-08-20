@@ -21,7 +21,7 @@ use WHMCS\Database\Capsule;
 function admin_blend_maincss_hook($vars)  {
 
 	if ($vars['template'] == "blend" ) {
-		return '<link href="../modules/addons/darkblend/css/dark-blend.css" rel="stylesheet" type="text/css" />';
+		return '<link id="darkblend-css" href="../modules/addons/darkblend/css/dark-blend.css" rel="stylesheet" type="text/css" />';
 	}
 }
 
